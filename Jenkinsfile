@@ -21,7 +21,7 @@ pipeline {
                         error 'authentification failed !!'
                     } else if (params.branch == 'feature') {
                         // Simuler une erreur indiquant que Bitbucket est indisponible pour feature
-                        sh 'echo "Bitbucket est indisponible" && exit 1'
+                        error 'echo "Bitbucket est indisponible" && exit 1'
                     }
                 }
             }
